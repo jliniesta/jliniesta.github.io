@@ -65,10 +65,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #header .profile img {
-  margin: 15px auto;
+  margin: 25px auto;
   display: block;
-  width: 120px;
-  border: 8px solid #2c2f3f;
+  width: 130px;
+  border: 6px solid #8695A7;
 }
 
 #header .profile h1 {
