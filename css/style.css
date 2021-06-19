@@ -433,6 +433,18 @@ section {
   color: #050d18;
 }
 
+.heading {
+  padding-bottom: 30px;
+}
+
+.heading h2 {
+  font-size: 25px;
+  padding-bottom: 5px;
+  position: relative;
+  color: #FF7400;
+  
+}
+
 .resume .resume-item {
   padding: 0 0 20px 20px;
   margin-top: -2px;
@@ -450,7 +462,7 @@ section {
   margin-bottom: 10px;
 }
 
-.resume .resume-item h5 {
+.resume  h5 {
   font-size: 16px;
   background: #e4edf9;
   padding: 5px 15px;
@@ -458,6 +470,14 @@ section {
   font-weight: 600;
   margin-bottom: 10px;
 }
+
+.resume  h4 {
+  justify-content: center;
+  font-size: 16px;
+  font-family: "Open Sans", sans-serif;
+  color: #272829;
+}
+
 
 .resume .resume-item ul {
   padding-left: 20px;
@@ -1122,3 +1142,233 @@ Button
   }
 }
 /*Scroll Down Animation*/
+
+/*-------------------------------------------------------------------------------
+ TIMELINE SECTION BOTH 5.EDUCATION AND 7.EXPERIENCE EXTENDS FROM IT
+-------------------------------------------------------------------------------*/
+
+#timeline-education {
+  /*education section*/
+  position: relative;
+}
+
+#timeline-education:before {
+  /*straight line*/
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 23px;
+  left: 50%;
+  height: 99.5%;
+  width: 4px;
+  opacity: 0.3;
+  background: #FF7400;
+}
+
+#timeline-experience {
+  /*experience section*/
+  position: relative;
+}
+
+#timeline-experience::before {
+  /*straight line*/
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 23px;
+  left: 50%;
+  height: 99.5%;
+  width: 4px;
+  opacity: 0.3;
+  background: #FF7400;
+}
+
+.timeline-block {
+  /*timeline block*/
+  position: relative;
+}
+
+.timeline-block::after {
+  /*timeline block after*/
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.timeline-block:first-child {
+  margin-top: 0;
+}
+
+.timeline-block:last-child {
+  margin-bottom: 0;
+}
+
+.timeline-block .card-content {
+  /*content*/
+  padding: 20px;
+}
+
+.timeline-block .card-content p {
+  /*paragraph*/
+  margin-top: 13px;
+  text-align: left;
+}
+
+.timeline-block .card-content .modal-dot {
+  outline: 0;
+  font-size: 20px;
+}
+
+.timeline-block .card-content .modal-dot:hover,
+.timeline-block .card-content .modal-dot:focus {
+  color: #12579b;
+}
+
+.timeline-block .timeline-dot {
+  /*timeline dot*/
+  background: #FF7400;
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  z-index: 2;
+  color: #fff;
+  text-align: center;
+  position: absolute;
+  top: 5px;
+  right: 2%;
+}
+
+.timeline-block .timeline-dot i {
+  /*dot icon*/
+  text-align: center;
+  font-size: 24px;
+  margin-top: 26%;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.29);
+}
+
+.timeline-block .timeline-dot h6 {
+  /*dot text*/
+  padding: 0;
+  font-size: 30px;
+  font-weight: bold;
+  margin-top: 8px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.29);
+}
+
+.timeline-block .timeline-content {
+  /*each timeline content*/
+  position: relative;
+  background: #fff;
+  margin-right: 0;
+  z-index: 1;
+  margin-bottom: 5px;
+  border-left: 5px solid #173b6c;
+}
+
+.timeline-block .timeline-content::before {
+  /*horizontal line*/
+  content: "";
+  width: 58px;
+  height: 4px;
+  position: absolute;
+  top: 26px;
+  left: 100%;
+  z-index: -2;
+  opacity: 0.4;
+  background: #FF7400;
+}
+
+.timeline-block .timeline-content::after {
+  /*horizontal line*/
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.timeline-block .timeline-content .timeline-title {
+  /*timeline blocks title*/
+  max-width: 90%;
+  font-weight: 900;
+  font-size: 20px;
+
+}
+
+.timeline-block .timeline-content .timeline-info {
+  /*more details*/
+}
+
+.timeline-block .timeline-content .timeline-info h6 {
+  /*subject or institution*/
+  line-height: 18px;
+}
+
+.timeline-block .timeline-content .timeline-info h6 small {
+  /*time*/
+  color: inherit;
+}
+
+@media screen and (max-width: 768px) {
+  .timeline-block .timeline-content:before {
+    /*horizontal line hide at screen size*/
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  /*properties for min width 768*/
+  #timeline-education::before {
+    /*vertical line for education in in min width 768 */
+    left: 50%;
+    margin-left: -2px;
+    height: 83.1%;
+    opacity: 0.4;
+    background: #FF7400;
+  }
+  #timeline-experience::before {
+    /*vertical line for experience in min width 768 */
+    left: 50%;
+    margin-left: -2px;
+    height: 88.1%;
+    opacity: 0.4;
+    background: #FF7400;
+  }
+  .timeline-block {
+    /*timeline block in min width 768*/
+    margin: -5em 0;
+  }
+  .timeline-block .card {
+    margin: 0;
+  }
+  .timeline-block .timeline-dot {
+    /*timeline dot in min width 768*/
+    width: 50px;
+    height: 50px;
+    left: 50%;
+    top: 0;
+    z-index: 2;
+    margin-left: -24px;
+    -webkit-transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+  }
+  .timeline-block .timeline-content {
+    /*timeline content in min width 768*/
+    width: 44%;
+  }
+  .timeline-block .timeline-content .timeline-title {
+    /*timeline title min width 768*/
+    max-width: 100%;
+  }
+  .timeline-block:nth-child(even) .timeline-content {
+    /*content to right*/
+    float: right;
+  }
+  .timeline-block:nth-child(even) .timeline-content::before {
+    /*horizontal line*/
+    top: 25px;
+    left: auto;
+    right: 101.2%;
+    z-index: -2;
+  }
+}
+
