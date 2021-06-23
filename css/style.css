@@ -617,10 +617,10 @@ section {
   justify-content: center;
   width: 54px;
   height: 54px;
-  background: #FF7400;
+  background: #232260;
   border-radius: 50%;
   transition: 0.5s;
-  border: 1px solid #FF7400;
+  border: 0px solid #232260;
 }
 
 .services .icon i {
@@ -629,11 +629,11 @@ section {
 }
 
 .services .icon-box:hover .icon {
-  background: #fff;
+  background: #FF7400;
 }
 
 .services .icon-box:hover .icon i {
-  color: #149ddd;
+  color: #fff;
 }
 
 .services .title {
@@ -644,7 +644,7 @@ section {
 }
 
 .services .title a {
-  color: #343a40;
+  color: #192531;
 }
 
 .services .title a:hover {
@@ -655,6 +655,8 @@ section {
   margin-left: 80px;
   line-height: 24px;
   font-size: 14px;
+  font-weight: 500;
+
 }
 
 
@@ -1160,8 +1162,7 @@ Button
   bottom: 23px;
   left: 50%;
   height: 99.5%;
-  width: 4px;
-  opacity: 0.3;
+  width: 6px;
   background: #FF7400;
 }
 
@@ -1178,8 +1179,7 @@ Button
   bottom: 23px;
   left: 50%;
   height: 99.5%;
-  width: 4px;
-  opacity: 0.3;
+  width: 6px;
   background: #FF7400;
 }
 
@@ -1270,12 +1270,11 @@ Button
   /*horizontal line*/
   content: "";
   width: 58px;
-  height: 4px;
+  height: 6px;
   position: absolute;
   top: 26px;
   left: 100%;
   z-index: -2;
-  opacity: 0.4;
   background: #FF7400;
 }
 
@@ -1322,7 +1321,6 @@ Button
     left: 50%;
     margin-left: -2px;
     height: 83.1%;
-    opacity: 0.4;
     background: #FF7400;
   }
   #timeline-experience::before {
@@ -1330,7 +1328,6 @@ Button
     left: 50%;
     margin-left: -2px;
     height: 88.1%;
-    opacity: 0.4;
     background: #FF7400;
   }
   .timeline-block {
@@ -1372,3 +1369,143 @@ Button
   }
 }
 
+.container-horizontal {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+
+.container-horizontal ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.container-horizontal ul::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.container-horizontal ul.timeline-horizontal {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 120px;
+  padding-left: 1em;
+}
+
+.container-horizontal ul.timeline-horizontal>li {
+  width: calc(100% / 6);
+
+}
+
+.container-horizontal ul.timeline-horizontal>li:nth-of-type(even)>.content {
+  -webkit-transform: translateY(calc(-100% - 24px));
+  transform: translateY(calc(-100% - 24px));
+}
+
+.container-horizontal ul .year {
+  color: #fff;
+  background: #040b14;
+  display: block;
+  position: relative;
+  padding-left: 24px;
+  line-height: 24px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.container-horizontal ul .year::before {
+  content: "";
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  background: #FF7400;
+  border-radius: 50%;
+  left: -24px;
+  top: calc((40 - 24) / 2 * -1px);
+}
+
+.container-horizontal ul .year.new {
+  border-radius: 0 24px 24px 0;
+}
+
+.container-horizontal ul .year.new::after {
+  content: "";
+  width: 5px;
+  height: 5px;
+  display: block;
+  border: 20px solid #3f444c;
+  box-sizing: border-box;
+  border-top-color: transparent;
+  border-right-color: transparent;
+  border-bottom-color: transparent;
+  position: absolute;
+  right: -30px;
+  top: -9.5px;
+}
+
+.container-horizontal ul .content {
+  border-left: 6px solid #FF7400;
+  margin-left: -4px;
+  font-family: "Open Sans", sans-serif;
+
+  padding: 15px 0;
+  padding-right: 24px;
+  font-size: 13px;
+}
+
+.container-horizontal ul .content>li {
+  padding-left: 12px;
+  border-bottom: 2px solid #FF7400;
+  font-family: "Open Sans", sans-serif;
+
+  padding-bottom: 8px;
+  position: relative;
+  margin-left: -4px;
+}
+
+.container-horizontal ul .content>li:last-of-type {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+
+.container-horizontal ul .content>li::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: #eef4f7;
+  left: 2px;
+  top: 8px;
+}
+
+@media screen and (max-width: 1140px) {
+  .container-horizontal ul.timeline-horizontal>li {
+      width: calc(100% / 4);
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .container-horizontal ul.timeline-horizontal>li {
+      width: calc(100% / 2);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .container-horizontal ul.timeline-horizontal {
+      display: block;
+      padding-top: 0px;
+  }
+
+  .container-horizontal ul.timeline-horizontal>li {
+      width: 100%;
+  }
+
+  .container-horizontal ul.timeline-horizontal>li:nth-of-type(even)>.content {
+      -webkit-transform: none;
+      transform: none;
+  }
+}
